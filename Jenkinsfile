@@ -9,19 +9,19 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/pavanreddy7-web/hello-world-java'
+                git 'https://github.com/pavanreddy7-web/hello-world-java.git'
             }
         }
 
         stage('Compile Java Code') {
             steps {
-                sh 'javac HelloWorld.java'
+                bat 'javac HelloWorld.java'
             }
         }
 
         stage('Run Java Program') {
             steps {
-                sh 'java HelloWorld'
+                bat 'java HelloWorld'
             }
         }
     }
@@ -36,10 +36,3 @@ pipeline {
         }
     }
 }
-
-
-
-
-
-
-
