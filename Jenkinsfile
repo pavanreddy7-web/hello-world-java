@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/pavanreddy7-web/hello-world-java.git'
-            }
-        }
-
         stage('Compile Java Code') {
             steps {
                 bat 'javac HelloWorld.java'
